@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+		
+		<link rel="stylesheet" type="text/css" href= "styles/widestyle.css" id="style" title="style"/>
+		<link rel="stylesheet" type="text/css" href= "styles/widestyle981.css" media="screen and (min-width: 982px)" />
+		<link rel="stylesheet" type="text/css" href= "styles/widestyle801.css" media="screen and (min-width: 801px) and (max-width: 981px)" />
+		<link rel="stylesheet" type="text/css" href= "styles/widestyle641.css" media="screen and (max-width: 800px) and (min-width: 641px)"/>
+		<link rel="stylesheet" type="text/css" href= "styles/widestyle640.css" media="screen and (max-width: 640px)" />
+			<link href='http://fonts.googleapis.com/css?family=Archivo+Narrow' rel='stylesheet' type='text/css'>
+		<script type="text/javascript" src="jscript/jquery-1.11.1.js"> </script>
+		<script type="text/javascript" src="jscript/imagereplace.js"> </script>
+		<script type="text/javascript" src="jscript/jquery-ui-1.10.4.js"> </script>
+		
+		<script type="text/javascript">
+		$(document).ready(function() {
+    $('.sh').click(function() {
+        $(this).parent().nextAll('.firstpara').first().toggle('medium');
+		$(this).parent().nextAll('#hideul').first().toggle('medium');
+		$(this).parent().nextAll('.knowledgebasesteps').toggle('medium');
+    });
+	
+	 	
+
+$( "#main" ).sortable({ cursor: "pointer" });
+
+$(".hidden").hide();
+$("#a").click(function()
+{
+$(this).("#perform").show();
+$(this).css("font-size","30pt");
+});
+$("#b").click(function()
+{
+$(this).("#addzeros").show();
+});
+});
+		</script>
+		<title>
+		My homepage 
+		</title>
+		
+		
+		
+		
+		
+		</head>
+
+	<body>
+		
+	<div id="main">
+	
+		<div id="nav">
+		<span class="linkcontainer"><a href="index.html"><img src="images/home.png" alt="home"  class="nav_image" id="home"/></a></span>
+			<span class="linkcontainer"><a href="pierscv.html"><img src="images/mycv.png" alt="my cv" class="nav_image" id="mycv" /></a></span>
+			<span class="linkcontainer"><a href="knowledgebase.html"><img src="images/knowledge.png" alt="knowledgebase "class="nav_image" id="knowledge" /></a></span>
+			<span class="linkcontainer"><a href="feedbackhome.php"><img src="images/feedback.png" alt="feedback" class="nav_image" id="feedback" /></a></span>
+			<a class="linkcontainer" href="contact.html"><img src="images/contact.png" alt="contact" class="nav_image" id="contact" /></a>
+		</div>
+		<h1>Knowledgebase </h1>
+		<div class="set">
+		<h2 class="firstsection">Introduction <button class="sh">show/hide </button> </h2>
+		
+		<p class="firstpara">
+		This page is designed as a knowledgebase of different things that I have picked up over the years to do with software and programming.
+		I have designed this page so that I can use it as a quick reference but also so that anyone can use it to help them.
+		You will find information on using Microsoft office, useful Javascript I have picked up, HTML5, css and a list of different doctypes
+		and video editing using Adobe Premiere Elements.<br/><br/>
+		<strong> If there is any other content you would find useful on this site to do with software and programming then let me know. </strong>
+		</p>
+		</div>
+		<div class="set">
+		<h2>Web Development <button class="sh">show/hide </button></h2>
+		<p class="firstpara">
+		<strong>Creating HTML5 Video with Flash fallback</strong><br/>
+		Create video files in formats which are appropriate for your audience.
+		These may include .mp4 , WebM , .WMV etc 
+		you will need either .swf or .flv for your flash fallback.
+		
+		The following code below can be used as a template for creating HTML5 video with flash fallback.<br/><br/>
+		&lt;video&gt;<br />
+			&nbsp;&nbsp;&lt;source src=&quot;file name.mp4&quot; type=&quot;video/mp4&quot;&gt;<br />
+			&nbsp;&nbsp;&lt;source src=&quot;file name.ogg&quot; type=&quot;video/ogg&quot;&gt;<br />
+			&nbsp;&nbsp;&lt;embed src=&quot;swf or flv video.flv&quot; <br />
+			&nbsp;&nbsp;type=&quot;application/x-shockwave-flash&quot;<br />
+			&nbsp;&nbsp;width=&quot;1024&quot; height=&quot;798&quot; <br />
+			&nbsp;&nbsp;allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot;&gt;&lt;/embed&gt;  <br />
+	&lt;/video&gt;
+		</p>
+		</div>
+		<div class="set">
+		<h2>Microsoft Office <button class="sh">show/hide </button></h2>
+		<div class="knowledgebasesteps">
+		<ul>
+		<li><a href="#a" id="a">Perform a Filter </a> </li>
+		<li><a href="#b" id="b">Add 0s to beginning of numbers </a> </li>
+		
+		</ul>
+		<object class="hidden" id="perform" data="http://localhost/MyWebsite/knowledgebasecontent/performafilter.html" style="width:1000px; height:1000px;"/>
+		<object class="hidden" id="addzeros" data="http://localhost/MyWebsite/knowledgebasecontent/Addzerostobeginning.html" style="width:1000px; height:1000px;"/>
+		
+		</div>
+	
+		
+		
+		
+		
+		</div>
+	</div>
+	</body>
+</html>
